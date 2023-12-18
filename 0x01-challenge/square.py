@@ -40,7 +40,8 @@ class Square():
         """Return a string representation of the square, including division
         result."""
         division_result = self.width / self.height
-        return f"{division_result}"
+        return "{}/{} = {}".format(self.width, self.height,
+                                                   division_result)
 
 
 if __name__ == "__main__":
