@@ -1,30 +1,50 @@
 #!/usr/bin/python3
-""" Declare class square """
+"""Define the Square class."""
 
 
-class square():
+class Square():
+    """A class representing a square.
+
+    Attributes:
+    - width (int): The width of the square.
+    - height (int): The height of the square.
+
+    Methods:
+    - __init__(self, width=0, height=0, **kwargs): Constructor to
+    initialize the square.
+    - area_of_my_square(self): Calculate the area of the square.
+    - perimeter_of_my_square(self): Calculate the perimeter of the square.
+    - __str__(self): String representation of the square, including division
+    result.
+    """
 
     def __init__(self, width=0, height=0, **kwargs):
+        """Initialize a Square instance with optional width, height, and
+        additional attributes."""
         self.width = width
         self.height = height
 
+        # Set additional attributes from kwargs
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """ Area of the square """
+        """Calculate the area of the square."""
         return self.width * self.height
 
-    def PermiterOfMySquare(self):
+    def perimeter_of_my_square(self):
+        """Calculate the perimeter of the square."""
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        division = self.width / self.height
-        return "{}".format(division)
+        """Return a string representation of the square, including division
+        result."""
+        division_result = self.width / self.height
+        return f"{division_result}"
 
 
 if __name__ == "__main__":
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.perimeter_of_my_square())
