@@ -18,7 +18,8 @@ class square():
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        return "{}/{}".format(self.width, self.height)
+        division = self.width / self.height
+        return "{}".format(division)
 
 if __name__ == "__main__":
 
