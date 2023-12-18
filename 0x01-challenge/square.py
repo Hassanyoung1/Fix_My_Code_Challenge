@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+""" Declare class square """
+
 
 class square():
 
-    width = 0
-    height = 0
+    def __init__(self, width=0, height=0, **kwargs):
+        self.width = width
+        self.height = height
 
-    def __init__(self, *args, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
